@@ -27,11 +27,11 @@
    BASE RESET
    =============================== */
 * {
-  font-size: 16px;
   box-sizing: border-box;
 }
 
 html {
+  font-size: 16px;
   font-family: 'fabfont', 'DejaVu Sans Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
   max-width: 900px;
   margin: 0 auto;
@@ -45,6 +45,20 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-size: 1rem;
+}
+
+p, li, dt, dd, td, th, figcaption, label, small, blockquote {
+  font-size: 1rem;
+}
+
+input, button, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+main.container {
+  margin-top: 2ch;
 }
 
 /* ===============================
@@ -72,23 +86,25 @@ sup {
 /* ===============================
    HEADINGS
    =============================== */
-div.heading {
+h1, h2, h3, h4, h5, h6, .heading {
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 4ch;
 }
 
-h1, h2, h3, h4 {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 4ch;
-}
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.15rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 1rem; }
 
 /* ===============================
    CODE & PRE BLOCKS
    =============================== */
-pre, code {
-  font-family: 'fabfont', monospace;
+pre, code, kbd, samp, tt {
+  font-family: 'fabfont', 'DejaVu Sans Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 1rem;
 }
 
 pre {
@@ -106,12 +122,16 @@ code {
   font-weight: bold;
 }
 
-/* Inline code inside pre shouldn't have double background */
 pre code {
   background: none;
   padding: 0;
   border-radius: 0;
   font-weight: normal;
+  font-size: inherit;
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  font-size: inherit;
 }
 
 /* ===============================
@@ -135,7 +155,6 @@ img.pixel, canvas.pixel {
   image-rendering: crisp-edges;
 }
 
-/* For blog images inside posts */
 .post img,
 article img {
   border: 1px solid black;
@@ -166,6 +185,10 @@ blockquote div {
   padding: 0 2px;
 }
 
+.sun-rule {
+  text-align: center;
+}
+
 /* ===============================
    TRIVIA BLOCK
    =============================== */
@@ -188,14 +211,14 @@ blockquote div {
   margin-top: 4ch;
   margin-bottom: 2ch;
   opacity: 0.7;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 /* ===============================
    RESPONSIVE
    =============================== */
 @media (max-width: 500px) {
-  * {
+  html {
     font-size: 12px;
   }
 }
