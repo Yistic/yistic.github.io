@@ -1,26 +1,34 @@
-url: "https://leventkaya.com"       # production domain, no trailing slash
-baseurl: ""                         # "" for root
+url: "https://example.com"
+baseurl: ""
 lang: en
-timezone: "Europe/Istanbul"         
-title: "Levent Kaya"
-description: "Personal notes on graphics, OS-dev, C/C++ and low-level experiments."
-email: leventkayadev@gmail.com
+timezone: "UTC"
+
+title: "Jane Doe"
+tagline: "Systems Programming and Graphics from Scratch"
+description: "Long-form notes on C, operating systems, emulation, and graphics written without a graphics library."
+email: jane@example.com
+
 favicon: /assets/images/favicon.png
-show_rss: false
-show_archive: false
-# Author (single definition)
+apple_touch_icon: /apple-touch-icon.png
+logo: "https://example.com/assets/images/logo.png"
+image: "https://example.com/assets/images/logo.png"
+twitter_username: janedoe
+
+show_rss: true
+show_archive: true
+
 author:
-  name: "Levent Kaya"
-  email: leventkayadev@gmail.com
+  name: "Jane Doe"
+  email: jane@example.com
 
 social:
   - name: "GitHub"
-    url: "https://github.com/lvntky"
-  - name: "LinkedIn"
-    url: "https://www.linkedin.com/in/levent-kaya/"
+    url: "https://github.com/janedoe"
+  - name: "Mastodon"
+    url: "https://fosstodon.org/@janedoe"
 
-# Theme + plugins
 theme: jekyll-theme-low
+
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
@@ -28,7 +36,6 @@ plugins:
 
 permalink: /:title/
 
-# Feed settings
 feed:
   path: rss.xml
 
@@ -38,23 +45,15 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      image: /assets/images/logo.png  # Add default image for posts
 
-# Markdown + syntax highlighting
 markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
 
-# Opsiyonel: exclude / include
 exclude:
-  - node_modules
-  - vendor
   - Gemfile
   - Gemfile.lock
   - README.md
-
-# SEO settings - USE ABSOLUTE URLs
-logo: "https://leventkaya.com/assets/images/logo.png"
-image: "https://leventkaya.com/assets/images/logo.png"
-twitter_username: "lvntky"
+  - node_modules
+  - vendor

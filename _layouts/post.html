@@ -33,36 +33,26 @@ layout: default
   {% endfor %}
 
   {% if related_posts.size > 0 %}
-  <h2 class="heading">Related Articles</h2>
-  <hr>
-  <p style="text-align:left; margin-bottom:1ch;">
-    {% for post in related_posts limit: 3 %}
-      {{ post.date | date: "%d/%m/%Y" }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
-    {% endfor %}
-  </p>
+    {% assign shown = related_posts | slice: 0, 3 %}
+    <h2 class="heading">Related Articles</h2>
+    <hr>
+    {% include post-list.html posts=shown %}
   {% elsif site.posts.size > 1 %}
-  <h2 class="heading">More Articles</h2>
-  <hr>
-  <p style="text-align:left; margin-bottom:1ch;">
-    {% assign other_count = 0 %}
-    {% for post in site.posts %}
-      {% if post.url != page.url and other_count < 3 %}
-        {{ post.date | date: "%d/%m/%Y" }}: <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
-        {% assign other_count = other_count | plus: 1 %}
-      {% endif %}
-    {% endfor %}
-  </p>
+    {% assign others = site.posts | where_exp: "post", "post.url != page.url" | slice: 0, 3 %}
+    <h2 class="heading">More Articles</h2>
+    <hr>
+    {% include post-list.html posts=others %}
   {% endif %}
 
-  <nav class="post-nav" style="display:flex; justify-content:space-between; margin-top:2ch;">
+  <nav class="post-nav">
     <div class="prev">
       {% if page.previous %}
-        ← <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+        &larr; <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
       {% endif %}
     </div>
-    <div class="next" style="text-align:right;">
+    <div class="next">
       {% if page.next %}
-        <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a> →
+        <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a> &rarr;
       {% endif %}
     </div>
   </nav>

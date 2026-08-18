@@ -1,7 +1,9 @@
-<p style="text-align:left; margin-bottom:1ch;">
+<ul class="post-list">
   {% assign posts_sorted = include.posts | default: site.posts | sort: "date" | reverse %}
   {% for post in posts_sorted %}
-    {{ post.date | date: "%d/%m/%Y" }}:
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+    &mdash; <a href="{{ post.url | relative_url }}">{{ post.title }}</a>.
+  </li>
   {% endfor %}
-</p>
+</ul>
