@@ -336,3 +336,61 @@ nav.post-nav {
 nav.post-nav .next {
   text-align: right;
 }
+
+/* ===============================
+   AUTOMATIC DARK MODE (NO-JS)
+   =============================== */
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #121210 !important; /* Retro dark-grey background */
+    color: #eaeaea !important;       /* Softer white text to reduce eye strain */
+  }
+
+  body {
+    color: #eaeaea !important;
+  }
+
+  /* Links contrast optimization */
+  a {
+    color: #ffffff !important;
+    border-bottom: 1px dashed #ffffff; /* Gives a subtle retro look to links */
+  }
+
+  /* Code blocks adjustment */
+  pre {
+    background-color: #1e1e1e !important;
+    border: 1px solid #eaeaea !important;
+  }
+  
+  code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+  }
+
+  /* Blockquotes styling */
+  blockquote {
+    background-color: #1a1a17 !important;
+    border: 1px dashed #666666 !important;
+    color: #cccccc !important;
+  }
+
+  /* The .sun container styling for dark mode */
+  .sun {
+    background: #222225 !important; /* Dark slate background */
+    color: #a0a0b0 !important;      /* Cool silver/grey text color */
+    border: 1px solid #33333b !important;
+  }
+
+
+  /* Image borders */
+  .post img, article img {
+    border: 1px solid #eaeaea !important;
+  }
+
+  /* Dark mode syntax highlighting overrides */
+  .highlight, .highlight .w { color: #eaeaea; }
+  .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1 { color: #75715e; } /* Comments */
+  .highlight .k, .highlight .kn, .highlight .kp, .highlight .kt, .highlight .kv, .highlight .kd { color: #f92672; } /* Keywords */
+  .highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #e6db74; } /* Strings */
+}
+

@@ -1,4 +1,5 @@
-url: "https://yistic.github.io/"
+#url: "https://yistic.github.io/"
+url: "http://localhost:4000"
 baseurl: ""
 lang: en
 timezone: "UTC"
@@ -8,10 +9,10 @@ tagline: "Systems Programming and Graphics from Scratch"
 description: "Long-form notes on C, operating systems, emulation, and graphics written without a graphics library."
 # email: jane@example.com
 
-favicon: /assets/images/favicon.png
-apple_touch_icon: /apple-touch-icon.png
-logo: "https://yistic.github.io/assets/images/logo.png"
-image: "https://yistic.github.io/assets/images/logo.png"
+#favicon: /assets/images/favicon.png
+#apple_touch_icon: /apple-touch-icon.png
+#logo: "https://yistic.github.io/assets/images/logo.png"
+#image: "https://yistic.github.io/assets/images/logo.png"
 # twitter_username: janedoe
 
 show_rss: true
