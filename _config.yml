@@ -6,18 +6,20 @@ timezone: "UTC"
 title: "Milan Đokić"
 tagline: "Systems Programming and Graphics from Scratch"
 description: "Long-form notes on C, operating systems, emulation, and graphics written without a graphics library."
+# email: jane@example.com
 
 favicon: /assets/images/favicon.png
 apple_touch_icon: /apple-touch-icon.png
 logo: "https://yistic.github.io/assets/images/logo.png"
 image: "https://yistic.github.io/assets/images/logo.png"
-
+# twitter_username: janedoe
 
 show_rss: true
 show_archive: true
 
 author:
   name: "Milan Đokić"
+#  email: jane@example.com
 
 social:
   - name: "GitHub"
@@ -25,7 +27,7 @@ social:
   - name: "LinkedIn"
     url: "https://www.linkedin.com/in/beli02/"
 
-theme: jekyll-theme-low
+# theme: jekyll-theme-low
 
 plugins:
   - jekyll-seo-tag
