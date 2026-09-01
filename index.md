@@ -12,6 +12,11 @@ without a graphics library, CPU emulation, and retrocomputing. Every post is
 written after the thing was actually built, which means the interesting part
 is usually the bug, not the design.
 
+## Elsewhere
+
+- [GitHub](https://github.com/janedoe)
+- [LinkedIn](https://rs.linkedin.com/in/beli02)
+
 ## Projects
 
 **[framebuffer-demo](https://github.com/janedoe/framebuffer-demo)** — Drawing
